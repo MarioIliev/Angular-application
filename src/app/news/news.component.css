@@ -1,0 +1,72 @@
+h1{
+    font-family: GameOfThrones;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+h2{
+    font-family: Cinzel,serif;
+}
+
+
+#bar{
+    background-image: url('../../assets/bg-archive-header.png');
+    background-size: auto auto;
+
+background-size: cover;
+
+margin: 0 0 4px;
+
+min-height: 150px;
+
+padding: 20px 136px;
+
+position: relative;
+
+text-align: center;
+}
+
+.mainDiv{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+p.italic {
+    font-style: italic;
+}
+.row{
+    border: 1px solid white;
+}
+.col-sm-6{
+    border : 2 px solid black;
+}
+.img{
+    text-align: left;
+}
+
+.col-md-6 img {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+
+}
+
+.col-md-6  img:hover{
+   
+    filter: grayscale(90%);
+    -webkit-filter: grayscale(90%);
+ 
+ transition: filter 600ms ease;
+ -webkit-transition: -webkit-filter 600ms ease;
+}
+
+body {
+    min-height: 100vh;
+}
+.flex-fill {
+   flex: 1 1 auto;
+}  
+.bg { 
+background-image: url('../../assets/borderNEW.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

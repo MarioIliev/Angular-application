@@ -1,0 +1,46 @@
+h1{
+    font-family: GameOfThrones;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+
+}
+
+.mainDiv{
+    margin-top: 20px;
+}
+
+.card-image img {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+
+}
+
+.card-image img:hover{
+   
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+ 
+ transition: filter 600ms ease;
+ -webkit-transition: -webkit-filter 600ms ease;
+}
+.btn {
+    background-color: gray;
+    color: black;
+}
+
+p.card-text {
+    font-style: italic;
+}
+body {
+    min-height: 100vh;
+}
+.flex-fill {
+   flex: 1 1 auto;
+}  
+.bg { 
+background-image: url('../../assets/borderNEW.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

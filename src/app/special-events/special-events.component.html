@@ -1,0 +1,32 @@
+<body class="d-flex flex-column">
+  <div class="main-page d-flex flex-column flex-fill">
+    <div class="bg flex-fill">
+      <div class="container">
+        <div class="mainDiv">
+          <h1 class="text-center">LEGENDS&ensp;AND&ensp;STORYES</h1>
+        </div>
+        <div class="container-body">
+          <div class="row mt-1">
+            <div class="col-md-4 mb-4" *ngFor="let event of specialEvents | paginate: {itemsPerPage: 6, currentPage: p}">
+              <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">{{event.name}}</h5>
+                  <p class="italic">{{event.theme}}</p>
+                  <div class="card-image">
+                    <img src={{event.imageUrl}} width="80%">
+                  </div>
+                  <p>______________</p>
+                  <a (click)="onSelect(event)" class="btn">View more</a>
+                </div>
+                <div class="card-footer text-muted">
+                  {{event.date | date:'shortDate'}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <pagination-controls class="text-center" (pageChange)="p =$event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

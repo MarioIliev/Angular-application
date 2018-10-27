@@ -1,0 +1,26 @@
+h1{
+    font-family: GameOfThrones;
+    text-transform: capitalize;
+}
+h2{
+    font-family: Cinzel,serif;
+}
+
+p.italic {
+    font-style: italic;
+}
+.btn{
+    background-color: black;
+    font-family: Cinzel,white;
+}
+.iframe-container{ 
+    position: relative; width: 100%; padding-bottom: 56.25%; height: 0; 
+    background-color: black;
+} 
+.iframe-container iframe{ 
+    position: absolute; 
+    top:0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}

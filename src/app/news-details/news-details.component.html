@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="col-lg-offset-4">
+    <img src="../../assets/news/news-navbar-1.jpg" width="100%">
+    <div class="card text-center">
+      <div class="card-body">
+        <div class="card-image">
+          <img src={{singleNews.imageUrl}} width="100%">
+        </div>
+        <h2>{{singleNews.title}}</h2>
+        <small>{{singleNews.author}} {{singleNews.date | date}}</small>
+        <div class="card-video">
+          <p class="italic">{{singleNews.description}}</p>
+        </div>
+        <div class="iframe-container" *ngIf="singleNews.videoUrl">
+          <iframe width="560" height="315" [src]="singleNews.videoUrl | youtube" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="card-video">
+          <p class="italic">{{singleNews.description1}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="card text-center">
+      <a (click)="getBack()" class="btn">BACK</a>
+    </div>
+  </div>

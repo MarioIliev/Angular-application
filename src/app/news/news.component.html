@@ -1,0 +1,25 @@
+<body class="d-flex flex-column">
+  <div class="main-page d-flex flex-column flex-fill">
+    <div class="bg flex-fill">
+      <div class="mainDiv">
+        <h1 class="text-center">GAME&ensp;OF&ensp;THRONES&ensp;NEWS</h1>
+        <div class="container">
+          <div id="allNewsDiv" class="row " *ngFor="let news of newses | paginate: {itemsPerPage: 5, currentPage: p}">
+            <div class="col-md-6 col-sm-6">
+              <img src={{news.imageUrl}} width="100%" (click)="onSelect(news)" />
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <h2 (click)="onSelect(news)">{{news.title}}</h2>
+              <p><small class="text-muted">winteriscoming.net by {{news.author}}: {{news.date | date}}</small></p>
+              <p class="d-sm-none d-sx-none d-md-block">{{news.description | slice: 0:500}}<a class="text-muted"
+                  (click)="onSelect(news)"> ...Read more</a></p>
+            </div>
+          </div>
+          <pagination-controls class="text-center" (pageChange)="p =$event"></pagination-controls>
+          <div class="mb-20">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

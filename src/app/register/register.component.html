@@ -1,0 +1,39 @@
+<div class="py-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card rounded-0">
+        <div class="card-header">
+          <h3 class="mb-0 text-center">Register</h3>
+        </div>
+        <div class="card-body">
+          <form class="form">
+            <div class="form-group">
+              <label for="uname1">Email</label>
+              <input type="text" required #email="ngModel" 
+                [class.is-invalid]="email.invalid && email.touched" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                [(ngModel)]="registerUserData.email" name="email" class="form-control rounded-0">
+              <small class="text-danger" [class.d-none]="email.valid || email.untouched">Enter valid email</small>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" required #password="ngModel" pattern="^[\d\w]{6,10}" 
+                [class.is-invalid]="password.invalid && password.touched"
+                [(ngModel)]="registerUserData.password" name="password" class="form-control rounded-0">
+              <small class="text-danger" [class.d-none]="password.valid || password.untouched">
+                Password must be 6-10 simbols (digits and latters)</small>
+            </div>
+            <div class="form-group">
+              <label>Confirm Password</label>
+              <input type="password" appConfirmEqualValidator="password" required #confirmPassword="ngModel" pattern="^[\d\w]{6}" 
+                [class.is-invalid]="confirmPassword.invalid && confirmPassword.touched"
+                [(ngModel)]="registerUserData.confirmPassword" name="confirmPassword" class="form-control rounded-0">
+              <small class="text-danger" *ngIf="confirmPassword.touched && confirmPassword.errors?.notEqual">
+                Password and Confirm Password does not match</small>
+            </div>
+            <button type="button" (click)="registerUser()" class="btn btn-primary">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

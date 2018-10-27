@@ -1,0 +1,28 @@
+<div class="container">
+  <div>
+    <h1 class="firstHeading">House {{event.name}}</h1>
+  </div>
+  <div class="col-lg-offset-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <h2>Family tree</h2>
+        <div class="card-image">
+          <img src={{event.tree}} width="100%">
+        </div>
+        <h2>History</h2>
+        <div class="card-video">
+          <p class="italic">{{event.history}}</p>
+        </div>
+        <h5>Short lore video</h5>
+        <div class="iframe-container">
+          <iframe width="560" height="315" [src]="event.videoUrl | youtube" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card text-center">
+      <a (click)="getBack()" class="btn">BACK</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<body class="d-flex flex-column">
+    <div class="main-page d-flex flex-column flex-fill">
+      <div class="bg flex-fill">
+        <div class="container-header">
+            <div class="mt-10">
+            </div>
+        </div>
+          <div class="container">
+              <div class="mainDiv">
+                  <h1 class="text-center">Westeros&ensp;houses</h1>
+                </div>
+              <div class="row">
+                <div class="col-md-4 mb-3" *ngFor="let event of events">
+                      <div class="card-image text-center">
+                        <img class="image" src={{event.imageUrl}} width="80%"  (click)="onSelect(event)">
+                        <a href="#" ></a>
+                      </div>
+                </div>
+              </div>
+            </div>
+
+      </div>
+    </div>
+  </body>

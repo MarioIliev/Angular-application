@@ -1,0 +1,37 @@
+h1{
+    font-family: GameOfThrones;
+}
+h5{
+    font-family: GameOfThrones;
+    text-transform: lowercase;
+}
+h6{
+    font-family: GameOfThrones;
+    text-transform: lowercase;
+}
+
+.mainDiv{
+    margin-top: 20px;
+}
+#c{
+    font-size: 15px;
+}
+body {
+    min-height: 100vh;
+}
+.flex-fill {
+   flex: 1 1 auto;
+}  
+.bg { 
+background-image: url('../../assets/banner-image-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+p {
+    font-family: Cinzel,serif;
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 150%;
+    margin-top: 0px;
+  }

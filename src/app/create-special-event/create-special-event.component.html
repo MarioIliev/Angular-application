@@ -1,0 +1,40 @@
+<div class="py-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card rounded-0">
+        <div class="card-header">
+          <h3 class="mb-0 text-center">CREATE SPECIAL EVENT</h3>
+        </div>
+        <div class="card-body">
+          <form class="form">
+            <div class="form-group">
+              <label for="uname1">Title</label>
+              <input type="text" [(ngModel)]="specialEventData.name" name="name" class="form-control rounded-0"
+                required>
+            </div>
+            <div class="form-group">
+              <label>Theme</label>
+              <input type="text" [(ngModel)]="specialEventData.theme" name="theme" class="form-control rounded-0"
+                required>
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <textarea type="textarea" [(ngModel)]="specialEventData.description" name="description" class="form-control rounded-0"
+                required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="uname1">Image</label>
+              <input id="file" type="file" (change)="handleInputChange($event)" name="image" class="form-control rounded-0"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="uname1">Video Url</label>
+              <input type="text" [(ngModel)]="specialEventData.videoUrl" name="videoUrl" class="form-control rounded-0">
+            </div>
+            <button type="button" (click)="createSpecialEvent()" class="btn btn-primary float-right">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

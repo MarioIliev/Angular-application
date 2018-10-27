@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <h1 class="firstHeading"> {{specialEvent.name}}</h1>
+  </div>
+  <div class="col-lg-offset-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <h2>
+          <p class="italic">{{specialEvent.theme}}</p>
+        </h2>
+        <div class="iframe-container">
+          <iframe width="560" height="315" [src]="specialEvent.videoUrl | youtube" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p>________________</p>
+        <h3>Short history</h3>
+        <p class="italic">{{specialEvent.description}}</p>
+      </div>
+    </div>
+    <div class="card text-center">
+      <a (click)="getBack()" class="btn">BACK</a>
+    </div>
+  </div>
+</div>
